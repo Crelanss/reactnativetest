@@ -8,10 +8,6 @@ import ThirdView from '../components/ThirdView'
 
 import {IFirstViewText, ISecondViewText, IThirdViewText} from '../interfaces/Interfaces'
 
-interface IProps {
-    currentPage: number
-}
-
 const firstViewText: IFirstViewText[] = [
     {
         transparentText: 'You have',
@@ -48,7 +44,7 @@ const thirdViewText: IThirdViewText[] = [
     }
 ]
 
-const PagerViewContainer: React.FC<IProps> = ({currentPage}) => {
+const PagerViewContainer: React.FC = () => {
     return (
         <PagerView style={styles.container} initialPage={0}>
             <View key='1'>

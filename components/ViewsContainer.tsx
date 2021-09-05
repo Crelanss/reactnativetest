@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {StyleSheet, Text, View} from 'react-native'
 import {LinearGradient} from 'expo-linear-gradient'
 import SvgUri from 'react-native-svg-uri'
@@ -8,9 +8,6 @@ import PagerViewContainer from "./PagerView";
 const logo = require('../assets/logo.svg')
 
 const ViewsContainer: React.FC = () => {
-    const [buttonText, setButtonText] = useState('Cool!')
-    const [currentPage, setCurrentPage] = useState(0)
-
     return (
         <View style={style.container}>
             <LinearGradient colors={['rgba(107, 115, 255, 1)', 'rgba(0, 13, 255, 1)']} style={style.linearGradient}>
@@ -23,13 +20,13 @@ const ViewsContainer: React.FC = () => {
                     </Text>
                 </View>
                 <View style={style.content}>
-                    <PagerViewContainer currentPage={currentPage}/>
+                    <PagerViewContainer/>
                 </View>
                 <View style={style.pagination}>
                 </View>
                 <View style={style.button}>
                     <Text style={style.buttonText}>
-                        {buttonText}
+                        Cool!
                     </Text>
                 </View>
             </LinearGradient>
